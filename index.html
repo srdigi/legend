@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Legend™ – Elite Cricket Analysis</title>
+
+<!-- META PIXEL -->
+<script>
+!function(f,b,e,v,n,t,s){
+if(f.fbq)return;
+n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)n=f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];
+t=b.createElement(e);t.async=!0;
+t.src=v;
+s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)
+}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','863598106480693');
+fbq('track','PageView');
+</script>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', Arial, sans-serif;
+}
+
+/* FULL CENTER + BACKGROUND */
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:
+      linear-gradient(rgba(0,0,0,.78),rgba(0,0,0,.92)),
+      url("legend-bg.png") center/cover no-repeat;
+}
+
+/* CARD */
+.container{
+    width:92%;
+    max-width:420px;
+    padding:30px 26px;
+    border-radius:24px;
+    background:rgba(0,0,0,0.6);
+    backdrop-filter: blur(18px);
+    box-shadow:
+      0 30px 80px rgba(0,0,0,.85),
+      inset 0 0 0 1px rgba(255,255,255,.08);
+    color:#fff;
+    text-align:center;
+    animation:pop .9s ease;
+}
+
+@keyframes pop{
+    from{opacity:0;transform:scale(.96)}
+    to{opacity:1;transform:scale(1)}
+}
+
+/* HEADER */
+.header h1{
+    font-size:30px;
+    letter-spacing:1.2px;
+    background:linear-gradient(90deg,#ffffff,#ff4d4d,#ffffff);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.header p{
+    margin-top:6px;
+    font-size:13px;
+    color:#ffbdbd;
+}
+
+/* COUNTER */
+.counter{
+    margin:18px 0;
+    font-size:16px;
+    font-weight:700;
+    color:#ffd36e;
+}
+
+/* FEATURES */
+.features{
+    margin:20px 0;
+}
+
+.features p{
+    font-size:14px;
+    margin-bottom:12px;
+    color:#f5f5f5;
+}
+
+.features span{
+    color:#ff4d4d;
+    font-weight:700;
+}
+
+/* CTA BUTTON */
+.join-btn{
+    margin-top:8px;
+    width:100%;
+    padding:17px;
+    border:none;
+    border-radius:45px;
+    font-size:15px;
+    font-weight:900;
+    letter-spacing:.6px;
+    cursor:pointer;
+    color:#fff;
+    background:linear-gradient(135deg,#ff2b2b,#b30000);
+    box-shadow:0 14px 40px rgba(255,0,0,.55);
+    transition:.3s ease;
+}
+
+.join-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 18px 55px rgba(255,0,0,.75);
+}
+
+/* STATUS */
+.status{
+    display:none;
+    margin-top:14px;
+    font-size:13px;
+    color:#7dffb3;
+}
+
+/* FOOTER */
+.footer{
+    margin-top:20px;
+    font-size:11px;
+    color:#d6d6d6;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1>Legend™</h1>
+        <p>Elite Cricket Reading • Calm • Calculated</p>
+    </div>
+
+    <div class="counter">
+        🔥 Subscribers: <span id="count">0</span>+
+    </div>
+
+    <div class="features">
+        <p>✔ <span>Match Structure Analysis</span></p>
+        <p>✔ <span>Toss & Session Reading</span></p>
+        <p>✔ <span>Pressure Situation Insights</span></p>
+        <p>✔ <span>No Betting • Pure Analysis</span></p>
+    </div>
+
+    <button class="join-btn" onclick="joinNow()">
+        SUBSCRIBE MY FREE CHANNEL
+    </button>
+
+    <div class="status" id="statusText">
+        Opening Telegram…
+    </div>
+
+    <div class="footer">
+        For informational & entertainment purpose only
+    </div>
+</div>
+
+<script>
+let target = 69491;
+let count = 0;
+
+let counter = setInterval(()=>{
+    count += 211;
+    if(count >= target){
+        count = target;
+        clearInterval(counter);
+    }
+    document.getElementById("count").innerText = count.toLocaleString();
+}, 25);
+
+let joinIntent=false;
+function joinNow(){
+    joinIntent=true;
+    document.getElementById("statusText").style.display="block";
+    setTimeout(()=>{
+        window.location.href="https://t.me/+f0fBYBCUvBA4YTA1";
+    },600);
+}
+
+document.addEventListener("visibilitychange",()=>{
+    if(document.hidden && joinIntent){
+        fbq('trackCustom','TelegramJoinIntent');
+        joinIntent=false;
+    }
+});
+</script>
+
+</body>
+</html>
