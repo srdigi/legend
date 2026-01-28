@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Legend™ – Elite Cricket Analysis</title>
+<title>Legend™ – The Calm Side of Cricket</title>
 
 <!-- META PIXEL -->
 <script>
@@ -28,115 +28,118 @@ fbq('track','PageView');
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:'Segoe UI', Arial, sans-serif;
+    font-family:'Segoe UI', system-ui, sans-serif;
 }
 
-/* FULL CENTER + BACKGROUND */
+/* BACKGROUND */
 body{
     min-height:100vh;
     display:flex;
     justify-content:center;
     align-items:center;
     background:
-      linear-gradient(rgba(0,0,0,.78),rgba(0,0,0,.92)),
+      linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.95)),
       url("legend-bg.png") center/cover no-repeat;
 }
 
-/* CARD */
+/* MAIN CARD */
 .container{
     width:92%;
     max-width:420px;
-    padding:30px 26px;
-    border-radius:24px;
-    background:rgba(0,0,0,0.6);
-    backdrop-filter: blur(18px);
+    padding:34px 26px;
+    border-radius:26px;
+    background:rgba(10,10,10,.65);
+    backdrop-filter: blur(20px);
     box-shadow:
-      0 30px 80px rgba(0,0,0,.85),
-      inset 0 0 0 1px rgba(255,255,255,.08);
+      0 35px 90px rgba(0,0,0,.9),
+      inset 0 0 0 1px rgba(255,255,255,.06);
     color:#fff;
     text-align:center;
-    animation:pop .9s ease;
+    animation:fadeIn .9s ease;
 }
 
-@keyframes pop{
-    from{opacity:0;transform:scale(.96)}
-    to{opacity:1;transform:scale(1)}
+@keyframes fadeIn{
+    from{opacity:0;transform:translateY(30px)}
+    to{opacity:1;transform:translateY(0)}
 }
 
-/* HEADER */
+/* TITLE */
 .header h1{
-    font-size:30px;
-    letter-spacing:1.2px;
-    background:linear-gradient(90deg,#ffffff,#ff4d4d,#ffffff);
+    font-size:32px;
+    letter-spacing:1.5px;
+    background:linear-gradient(90deg,#ffffff,#e6e6e6,#ff4d4d);
     -webkit-background-clip:text;
     -webkit-text-fill-color:transparent;
 }
 
 .header p{
-    margin-top:6px;
+    margin-top:8px;
     font-size:13px;
-    color:#ffbdbd;
+    letter-spacing:.4px;
+    color:#cfcfcf;
 }
 
-/* COUNTER */
+/* SUB COUNT */
 .counter{
-    margin:18px 0;
+    margin:22px 0;
     font-size:16px;
-    font-weight:700;
+    font-weight:800;
     color:#ffd36e;
 }
 
-/* FEATURES */
+/* CONTENT */
 .features{
-    margin:20px 0;
+    margin:22px 0;
 }
 
 .features p{
     font-size:14px;
-    margin-bottom:12px;
-    color:#f5f5f5;
+    margin-bottom:14px;
+    color:#f1f1f1;
+    line-height:1.4;
 }
 
 .features span{
     color:#ff4d4d;
-    font-weight:700;
+    font-weight:800;
 }
 
-/* CTA BUTTON */
+/* UNIQUE CTA BUTTON */
 .join-btn{
-    margin-top:8px;
+    margin-top:12px;
     width:100%;
-    padding:17px;
+    padding:18px;
     border:none;
-    border-radius:45px;
+    border-radius:50px;
     font-size:15px;
     font-weight:900;
-    letter-spacing:.6px;
+    letter-spacing:.8px;
     cursor:pointer;
-    color:#fff;
-    background:linear-gradient(135deg,#ff2b2b,#b30000);
-    box-shadow:0 14px 40px rgba(255,0,0,.55);
-    transition:.3s ease;
+    color:#001b1b;
+    background:linear-gradient(135deg,#2afadf,#4facfe);
+    box-shadow:0 18px 45px rgba(79,172,254,.45);
+    transition:.35s ease;
 }
 
 .join-btn:hover{
-    transform:translateY(-3px);
-    box-shadow:0 18px 55px rgba(255,0,0,.75);
+    transform:translateY(-4px);
+    box-shadow:0 22px 60px rgba(79,172,254,.7);
 }
 
 /* STATUS */
 .status{
     display:none;
-    margin-top:14px;
+    margin-top:16px;
     font-size:13px;
     color:#7dffb3;
 }
 
 /* FOOTER */
 .footer{
-    margin-top:20px;
+    margin-top:22px;
     font-size:11px;
-    color:#d6d6d6;
+    color:#bdbdbd;
+    letter-spacing:.3px;
 }
 </style>
 </head>
@@ -146,18 +149,18 @@ body{
 <div class="container">
     <div class="header">
         <h1>Legend™</h1>
-        <p>Elite Cricket Reading • Calm • Calculated</p>
+        <p>Not Noise. Just Reading the Game.</p>
     </div>
 
     <div class="counter">
-        🔥 Subscribers: <span id="count">0</span>+
+        ⚡ Trusted by <span id="count">0</span>+ readers
     </div>
 
     <div class="features">
-        <p>✔ <span>Match Structure Analysis</span></p>
-        <p>✔ <span>Toss & Session Reading</span></p>
-        <p>✔ <span>Pressure Situation Insights</span></p>
-        <p>✔ <span>No Betting • Pure Analysis</span></p>
+        <p>🧠 <span>Calm Match Reading</span> — no panic, no hype</p>
+        <p>📊 <span>Session & Momentum Flow</span> explained simply</p>
+        <p>🎯 <span>Pressure Zone Analysis</span> you can actually understand</p>
+        <p>🛑 Pure knowledge — no betting, no selling dreams</p>
     </div>
 
     <button class="join-btn" onclick="joinNow()">
@@ -169,7 +172,7 @@ body{
     </div>
 
     <div class="footer">
-        For informational & entertainment purpose only
+        Informational & entertainment purpose only
     </div>
 </div>
 
@@ -178,7 +181,7 @@ let target = 69491;
 let count = 0;
 
 let counter = setInterval(()=>{
-    count += 211;
+    count += 227;
     if(count >= target){
         count = target;
         clearInterval(counter);
